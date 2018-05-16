@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+   マニフェストファイル
+
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.palm3.cosmic.googlebooksapi">
+
+    <!-- パーミッション -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- アプリケーション -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- アクティビティ #01 - 書籍検索ホーム -->
+        <activity
+            android:name="com.palm3.cosmic.googlebooksapi.book.home.HomeActivityMVP"
+            android:label="@string/title_home_activity"
+            android:launchMode="singleTop">
+
+            <!-- イテント #01 -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <!--<action android:name="android.intent.action.VIEW" />-->
+                <!--<category android:name="android.intent.category.DEFAULT" />-->
+                <!--<category android:name="android.intent.category.BROWSABLE" />-->
+                <!--<data-->
+                <!--android:scheme="http"-->
+                <!--android:host="www.googleapis.com"-->
+                <!--android:pathPrefix="/books/v1/" />-->
+            </intent-filter>
+            <!-- イテント #02 - 検索 -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+
+            <!-- メタデータ #01 -->
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value="com.palm3.cosmic.googlebooksapi.book.home.HomeActivityMVP" />
+            <!-- メタデータ #02 -->
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+        </activity>
+
+        <!-- アクティビティ #02 - 書籍検索詳細 -->
+        <activity
+            android:name="com.palm3.cosmic.googlebooksapi.book.detail.DetailActivityMVP"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- アクティビティ # 03 - ログイン・サインイン -->
+        <activity
+            android:name="com.palm3.cosmic.googlebooksapi.book.login.LoginActivity"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name="com.palm3.cosmic.googlebooksapi.book.login.SignupActivity"
+            android:theme="@style/AppTheme.Dark" />
+    </application>
+
+    <!--
+    NOTE USING SETTINGS
+    // アプリデータの自動バックアップ see: https://goo.gl/F0yxV9
+    // android:fullBackupContent="@xml/google_book_searcher_backup"
+    -->
+</manifest>

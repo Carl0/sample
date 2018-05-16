@@ -1,0 +1,16 @@
+<!--
+
+  メニューアイテム領域のレイアウト（ウィジット追加で領域を追加可能）
+
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.palm3.cosmic.googlebooksapi.book.home.HomeActivityMVP">
+    <!-- 検索ボタン -->
+    <item android:id="@+id/action_search"
+        android:title="@string/search_book"
+        android:icon="@android:drawable/ic_menu_search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView"/>
+</menu>

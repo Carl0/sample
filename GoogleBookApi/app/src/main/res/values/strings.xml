@@ -1,0 +1,28 @@
+<!--
+
+   文字列設定
+
+-->
+<resources>
+    <!-- アプリ名 - アプリ一覧表示用 -->
+    <string name="app_name">Google Books Searcher</string>
+    <!-- アプリ名 - デスクトップ表示用 -->
+    <string name="title_home_activity">Google Books Searcher</string>
+
+    <!-- 基本出力情報 -->
+    <string name="search_book">書籍検索</string>
+    <string name="title_book">書籍タイトル</string>
+    <string name="author_by_anonymous">書籍著者（匿名）</string>
+    <string name="image_book">書籍サムネイル画像</string>
+    <string name="overflow_book">オーバーフロー</string>
+    <string name="lorem_ipsum">隣の客はよく柿喰う客だ。アルミ缶の上にアルミ缶。東京特許許可局。カエルピョコピョコにぴょこぴょこ。</string>
+    <string name="description">Description :</string>
+
+    <!-- 素材説明 -->
+    <string name="desc_image">書籍サムネイル画像出力領域</string>
+
+    <!-- 音声検索 -->
+    <string name="app_name_home_for_search">SearchTest</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="search_hint">入力してください</string>
+</resources>
